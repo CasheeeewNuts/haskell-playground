@@ -1,17 +1,28 @@
 {
-  "name": "haskell-playground-app",
+  "name": "app",
   "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT",
   "scripts": {
-    "dev": "vite",
-    "prebuild": "tsc",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "svelte": "^3.44.0"
+  },
+  "type": "module",
   "dependencies": {
-    "vite": "^2.9.1",
-    "xterm": "^4.18.0",
-    "xterm-addon-fit": "^0.5.0"
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
   }
 }
